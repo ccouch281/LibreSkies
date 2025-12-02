@@ -37,7 +37,7 @@ FetchContent_Declare(
 )
 
 # Make available
-FetchContent_MakeAvailable(EnTT glfw tinygltf)
+FetchContent_MakeAvailable(EnTT glfw)
 
 # Add src directory
 add_subdirectory(src)

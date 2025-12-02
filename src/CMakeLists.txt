@@ -7,7 +7,6 @@ target_compile_features(LibreSkiesApp PRIVATE cxx_std_20)
 # Include directories for header-only libraries
 target_include_directories(LibreSkiesApp PRIVATE
     ${EnTT_SOURCE_DIR}/single_include
-    ${tinygltf_SOURCE_DIR}
 )
 
 # Link GLFW (FetchContent provides target 'glfw')
