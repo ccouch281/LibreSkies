@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
+# Use an explicit policy version to avoid compatibility failures when fetching
+# older dependencies that declare very old cmake_minimum_required values.
+cmake_policy(VERSION 3.16)
 project(LibreSkies VERSION 0.1 LANGUAGES CXX)
 
 # Project settings
@@ -16,15 +19,15 @@ endif()
 
 # Fetch header-only GLM (math) and EnTT (ECS), and GLFW for windowing
 FetchContent_Declare(
-    glm
-    GIT_REPOSITORY https://github.com/g-truc/glm.git
-    GIT_TAG 0.9.9.8
-)
-
-FetchContent_Declare(
     EnTT
     GIT_REPOSITORY https://github.com/skypjack/entt.git
     GIT_TAG v3.10.0
+)
+
+FetchContent_Declare(
+    tinygltf
+    GIT_REPOSITORY https://github.com/syoyo/tinygltf.git
+    GIT_TAG master
 )
 
 FetchContent_Declare(
@@ -34,7 +37,7 @@ FetchContent_Declare(
 )
 
 # Make available
-FetchContent_MakeAvailable(glm EnTT glfw)
+FetchContent_MakeAvailable(EnTT glfw tinygltf)
 
 # Add src directory
 add_subdirectory(src)

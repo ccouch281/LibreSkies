@@ -5,8 +5,8 @@ target_compile_features(LibreSkiesApp PRIVATE cxx_std_20)
 
 # Include directories for header-only libraries
 target_include_directories(LibreSkiesApp PRIVATE
-    ${glm_SOURCE_DIR}
     ${EnTT_SOURCE_DIR}/single_include
+    ${tinygltf_SOURCE_DIR}
 )
 
 # Link GLFW (FetchContent provides target 'glfw')
@@ -24,9 +24,9 @@ if(Vulkan_FOUND)
     target_compile_definitions(LibreSkiesApp PRIVATE USE_VULKAN=1)
 endif()
 
-# Simple compile flags for performance-focused builds
+# Simple compile flags for performance-focused builds (apply only for Release config)
 if(MSVC)
-    target_compile_options(LibreSkiesApp PRIVATE /O2 /arch:AVX2)
+    target_compile_options(LibreSkiesApp PRIVATE $<$<CONFIG:Release>:/O2> $<$<CONFIG:Release>:/arch:AVX2>)
 else()
-    target_compile_options(LibreSkiesApp PRIVATE -O3 -march=native)
+    target_compile_options(LibreSkiesApp PRIVATE $<$<CONFIG:Release>:-O3 -march=native>)
 endif()
