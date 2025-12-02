@@ -1,0 +1,22 @@
+# Visual Studio / .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Rider
+.idea/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
