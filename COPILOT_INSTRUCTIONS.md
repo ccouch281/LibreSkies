@@ -46,3 +46,11 @@ When uncertain
 - If a proposed change improves readability while slightly deviating from these rules, discuss it in a PR and document the decision.
 
 This file is the authoritative guidance for in-repository Copilot usage and contributor style. Update it by pull request if you want to evolve the rules.
+
+User-specific preferences and working on other people's files
+
+- Personal preferences: You may keep a local, personal editorconfig named `.editorconfig.user` in your working copy to store your personal formatting preferences (for example, a 40-character line limit). This file is intentionally ignored by the repository and should not be committed.
+
+- When editing someone else's file: Always follow the existing file's style. Detect the file's style by checking the repository `.editorconfig`, the file contents (indentation, brace style, naming), or the project's established conventions. Do not reformat or rename to your personal preferences when modifying another contributor's file — keep changes minimal and style-consistent.
+
+- Accepting Copilot suggestions: If Copilot suggests code that follows your personal `.editorconfig.user` but the file you're editing uses a different style, edit the suggestion to match the file's style before accepting.
