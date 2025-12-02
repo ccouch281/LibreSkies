@@ -72,6 +72,19 @@ int main()
         return -1;
     }
 
+#ifdef USE_VULKAN
+    VulkanContext vkctx{};
+    std::string vkErr, vkWarn;
+    if(InitVulkan(window, vkctx, vkErr, vkWarn))
+    {
+        std::cout << "Vulkan initialized successfully." << std::endl;
+    }
+    else
+    {
+        std::cerr << "Vulkan init failed: " << vkErr << std::endl;
+    }
+#endif
+
     std::cout << "Created window. Close it to exit.\n";
 
     // Main loop (minimal)

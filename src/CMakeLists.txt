@@ -1,5 +1,6 @@
 # src CMake for the example application
 add_executable(LibreSkiesApp main.cpp)
+target_sources(LibreSkiesApp PRIVATE vulkan.cpp)
 
 target_compile_features(LibreSkiesApp PRIVATE cxx_std_20)
 
