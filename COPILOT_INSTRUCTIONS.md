@@ -18,10 +18,10 @@ Primary rules
 - Example shape:
 
   public class FlightPlanner
-  
+
   {
       public void PlanFlight()
-      
+
       {
           // implementation
       }
