@@ -1,0 +1,10 @@
+# .clang-format - style configuration
+# Enforce Allman (opening brace on new line) and other project preferences
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 120
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: Inline
+SpacesBeforeTrailingComments: 1
+DerivePointerAlignment: false
+PointerAlignment: Left
