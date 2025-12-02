@@ -47,6 +47,14 @@ When uncertain
 
 This file is the authoritative guidance for in-repository Copilot usage and contributor style. Update it by pull request if you want to evolve the rules.
 
+Contributor style policy
+
+- New files: When creating a brand-new file, contributors may use their preferred coding style and formatting. This repository tolerates multiple personal styles for new files so long as code is readable and follows the project's high-level expectations (clear names, small functions, performance-conscious design).
+
+- Editing existing files: When modifying an existing file, always follow that file's current style and formatting. Do not reformat or rename symbols to match your personal style in the same commit unless the change is part of a focused, separate style/format PR that clearly documents the scope and is approved by reviewers.
+
+- Copilot behavior: If Copilot suggests code that reflects your personal style while you are editing someone else's file, edit the suggestion to match the file's style before accepting. For new files you create, you may accept suggestions that match your personal preferences.
+
 User-specific preferences and working on other people's files
 
 - Personal preferences: You may keep a local, personal editorconfig named `.editorconfig.user` in your working copy to store your personal formatting preferences (for example, a 40-character line limit). This file is intentionally ignored by the repository and should not be committed.

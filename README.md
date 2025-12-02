@@ -26,6 +26,12 @@ Personal style preferences
 
 - Important: When editing someone else's file, match that file's style. Do not apply your personal settings to files authored by others. The guidance in `COPILOT_INSTRUCTIONS.md` explains this policy in more detail.
 
+Contributor style policy
+
+- New files: Contributors are free to use their preferred coding style when creating new files. The project accepts different personal styles for new files as long as code is readable and follows project goals (clear names, small functions, performance-conscious design).
+
+- Editing existing files: When editing someone else's file, always follow that file's existing style. Avoid reformatting or renaming to match your personal preferences in the same commit. If you want to harmonize styles across files, open a separate PR that only contains formatting/style changes and document the scope for reviewers.
+
 Building the C++ starter (Vulkan/GLFW/GLM/EnTT)
 
 Prerequisites
